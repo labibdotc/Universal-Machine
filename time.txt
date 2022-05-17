@@ -1,0 +1,38 @@
+lab235u{aafia01}130: time ./um umbin/midmark.um
+ == UM beginning stress test / benchmark.. ==
+4.   12345678.09abcdef
+3.   6d58165c.2948d58d
+2.   0f63b9ed.1d9c4076
+1.   8dba0fc0.64af8685
+0.   583e02ae.490775c0
+Benchmark complete.
+11.531u 0.000s
+
+-O1
+lab235u{aafia01}140: time ./um umbin/midmark.um
+ == UM beginning stress test / benchmark.. ==
+4.   12345678.09abcdef
+3.   6d58165c.2948d58d
+2.   0f63b9ed.1d9c4076
+1.   8dba0fc0.64af8685
+0.   583e02ae.490775c0
+Benchmark complete.
+9.700u 0.000s 0:09.74 99.5%     0+0k 0+0io 0pf+0w
+
+
+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
+
+
+
+
+
+-O2
+lab235u{aafia01}138: time ./um umbin/midmark.um
+ == UM beginning stress test / benchmark.. ==
+4.   12345678.09abcdef
+3.   6d58165c.2948d58d
+2.   0f63b9ed.1d9c4076
+1.   8dba0fc0.64af8685
+0.   583e02ae.490775c0
+Benchmark complete.
+9.721u 0.001s 0:09.76 99.5%     0+0k 0+0io 0pf+0w

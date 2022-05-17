@@ -1,0 +1,74 @@
+Caleb Pekowsky, Abdulrahman Afia
+
+Acknowledgements:
+    Dylan-Dylan-Dylan
+    and Liana
+    & all the TAs in OH are so helpful
+
+Implemented Correctly: 
+    We believe we have successfully implemented all parts of this assignment
+
+
+Departures from original design: 
+    We intially had memory defined as a global sequene in Memory.h. 
+    It is bad modularity and not very efficient we found out.
+    So we started having a struct definition before the functions and declared
+    an instance of it on the heap in the memory_new function. Works perfectly.
+    And better secret keeping of course.
+
+Architecture: 
+
+    Memory is represented as a struct that saves both a sequence of segments
+    and a sequence of ids that have been unmapped and ready to be recycled.
+
+    memoryRepresentation.h is a module that secretly keeps the definition of
+    this struct and we include it in memory.h
+
+    memory.h is a module that represents the memory functionality. It manages
+    mapping segments, unmapping segments, loading segments and storing segments
+    They all come together in this file for the fact that they all share the
+    memory nitty-gritty work. 
+
+    actions.h is another module that keeps the secret of how the instructions
+    are excuted. It has a doCommand function which carries out one command
+    by calling the appropriate command method.
+
+    um.h is a module that represents our Universal machine. It has the 
+    array of 8 registers, the counter of the program, and the workflow of the
+    instructions happen there. The UM is the bigger module that interacts with
+    almost every other module at the end of the day which is obviously the
+    ultimate goal. It interacts with IO.h which reads in the commands from the
+    .um files and stores them into an array of words. It also interacts with 
+    memory when mapping, unmapping, etc is happening. It interacts with 
+    actions.h to carry out the instruction where the counter is pointing as 
+    program proceeds.
+
+    testing is another module that have some important draft code 
+    to test the functions we implemented for all of the other modules as 
+    we built everything.
+
+    umlab.c and umlabwrite.c are the two files we use to produce files with 
+    instruction words that our um can run on. It was used eventually to test 
+    all of the modules functionality. 
+
+How long does it take the UM to excute 50 million instructions?
+85070522 instructions took 8.87 seconds using a counter in our program while
+loop and the time command. So, more like 5 seconds for 50 million instructions.
+
+
+UM unit tests:
+
+halt.um:            tests if halt stops the program
+
+halt-verbose.um:    tests if halt is the first word of a big program it will 
+                    stop before running
+
+divide.um:          tests the divide instruction
+
+nand.um:            nand two things and print out the register with result
+
+
+
+Analysis time:                              10 hours
+Design time:                                20 hours
+solving the problems after analysis:        10 hours
