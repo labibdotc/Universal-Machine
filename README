@@ -1,13 +1,5 @@
 Caleb Pekowsky, Abdulrahman Afia
 
-Acknowledgements:
-    Dylan-Dylan-Dylan
-    and Liana
-    & all the TAs in OH are so helpful
-
-Implemented Correctly: 
-    We believe we have successfully implemented all parts of this assignment
-
 
 Departures from original design: 
     We intially had memory defined as a global sequene in Memory.h. 
